@@ -1,0 +1,72 @@
+<!--
+The primary purpose of this code is to handle the scenario when a user navigates to a
+non - existent page on a website, resulting in a '404 Not found error', insted of displaying
+a generic error message this code aims to achives this by  presenting a visually appealing layout
+with custom styling and a good interface
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AN error occured</title>
+</head>
+
+<body>
+    <div class="container col-lg-4 col-lg-offset-4 main">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="error-template">
+                    <h1> Sorry!! </h1>
+                    <h2> ERROR 404  </h2>
+                    <div class="error-details">
+                        Sorry, an error has occured, Requested page not found!
+                    </div>
+                    <div class="error-actions go-home">
+                        <a href="/" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span>
+                            Go back Home </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <style>
+        body {
+            font-size: 34px;
+
+            text-align: center;
+            background-image: url("D:\working\review generator\static\backgrounds\bg-404.jpg");
+            padding-top: 4%;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .main {
+            background-color: rgb(241, 10, 10);
+            color: rgb(251, 249, 255);
+            opacity: 80%;
+            border-radius: 40px;
+            margin-top: 15%;
+            padding: 30px 20px 40px 20px;
+
+        }
+
+        .go-home {
+            color: rgb(165, 129, 129);
+            border-radius: 20px;
+            padding: 20px 20px 40px 20px;
+
+        }
+    </style>
+
+    
+</body>
+
+</html>

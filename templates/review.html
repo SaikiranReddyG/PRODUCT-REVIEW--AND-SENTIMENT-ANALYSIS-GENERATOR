@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<title>Reviews</title>
+
+{% endblock title %}
+
+<!-- <div class="container"> -->
+        {% block word_cloud %}
+        <li class="nav-item btn-outline-success">
+                <a class="nav-link" href="/show">Wordcloud</a>
+        </li>
+        <li class="nav-item btn-outline-success">
+                <a class="nav-link" href="{{ download_csv }}">Download Data</a>
+        </li>
+        {% endblock word_cloud %}
+<!--HTML code for navigation menu that includes links for displaying the word cloud and download data -->
+
+
+        {% block searchbar %}
+
+        <form action="/review" method="POST" class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" name="content" type="search" placeholder="Search"
+                        aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+<!--HTML code for a search form, it will replace the search bar block defined in the vase template-->
+
+        {% endblock searchbar %}
+<!-- </div> -->
+
+{% block body %}
+<div class="container">
+        {% for table in tables %}
+        <h3>{{ table | safe }}</h3>
+        <!--the safe filter is used to display the HTML content within the table variable without escaping any charecters-->
+        {% endfor %}
+
+        <!-- Add code for displaying sentiment analysis data -->
+    <h2>Sentiment Analysis</h2>
+    <p>Positive Sentiments: {{ sentiment_counts['Positive'] }}</p>
+    <p>Negative Sentiments: {{ sentiment_counts['Negative'] }}</p>
+
+</div>
+{% endblock body %}
+
+<!--
+This code extends a base template, customizes the title, word cloud navigation menu, search form, body content
+it allows for modular customization of different sections within the base template to create a specific
+webpage for displaying the reviews
+-->

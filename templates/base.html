@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS --><!--
+   this code includes the bootstrap css framework by linking to an external stylesheet
+   it loads the css file from the provided url which is the bootstrap version 4.3.1-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  {% block title %}
+  {% endblock title %}
+  <!--these are the placeholders for the title of the HTML page
+  they are part of thet tamplete engine and allow dynamic content to be inserted in this location-->
+</head>
+
+<body>
+
+  <!-- {% block navbar %} -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <!--defines the nav bar with dark bg-->
+  <!--uses bootstrap's css classes to style the nav bar-->
+    <a class="navbar-brand" href="/">Home</a>
+    <!--creates  a link with the text home and sets it as the brand logo of the nav bar-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      <!--creates a toggle button for the collapsed navbar and allows the nav bar to be expanded when clicked-->
+
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <!--creates a unordered list to contain the nav links in the nav bar-->
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/SaikiranReddyG/PRODUCT-REVIEW-GENERATOR">Github</a>
+          <!--creates a link item to the repository to the project-->
+        </li>
+        {% block word_cloud %}
+        {% endblock word_cloud %}
+        <!--place holders for the word cloud section & part of the tamplete engine-->
+      </ul>
+      {% block searchbar %}
+      {% endblock searchbar %}
+      <!--place holders for the search bar section -->
+    </div>
+
+  </nav>
+  <!-- {% endblock navbar %} -->
+
+  {% block body %}
+  {% endblock body %}
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!--(script1)import the jquery library fron the remote source-->
+  <!--(script2)imports popper.js from a remote source-->
+  <!--(script3)imports the bootsrap JS library from a remote source-->
+  <!--integrity attribute provides a hash value for integrity checking & ensuring the file is not tampered with-->
+  <!--crossgrain attribute allows the script to be requested from another domain in a cross origin manner-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
