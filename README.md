@@ -1,4 +1,4 @@
-# Sentiment Analysis of Product Reviews
+# PRODUCT-REVIEW--AND-SENTIMENT-ANALYSIS-GENERATOR
 
 This project aims to perform sentiment analysis on product reviews from Flipkart.com. It collects data from the website, analyzes the sentiment of each comment, and provides visualizations such as word clouds and sentiment counts.
 
